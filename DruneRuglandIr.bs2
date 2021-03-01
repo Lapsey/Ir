@@ -3,6 +3,10 @@
  rightIr VAR Bit
 
 'Main
+DO
+    GOSUB checkIrs
+    DEBUG HOME, "Left Ir = ", BIN1 leftIr
+LOOP
 
 END
 
