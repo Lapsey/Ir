@@ -1,0 +1,16 @@
+'Variables
+ leftIr  VAR Bit
+ rightIr VAR Bit
+
+'Main
+
+END
+
+'Subroutines
+checkIrs:
+    FREQOUT 8, 1, 38500
+    leftIr = IN9
+
+    FREQOUT 4, 1, 38500
+    rightIr = IN5
+RETURN
