@@ -29,19 +29,24 @@ Simple infrared boe-bot maze navigation script
 #### Pros
 1. reliable side wall detection 
 2. easy turn detection 
+3. possible correction detection
 
 #### Cons
 1. physically finicky 
-2. unclear solution
-3. unclear correction detection
+
+# Angled solution
+1. check the sensors 
+2. if both see wall then go forward
+3. otherwise
+ * correct into the side that doesn't see and adjust the values so the turn works well
 
 ## TODO
 * [x] Add IR check routine
 * [x] Test IR On start up
 * [x] Add movement subs
 * [x] Figure out a solution to the maze
-    * [x] Forward facing 
+    * [ ] Forward facing 
     * [ ] sideward facing
-    * [ ] angled facing 
+    * [x] angled facing 
 * [ ] Implement the solution
 * [ ] Remove unecessary code 
