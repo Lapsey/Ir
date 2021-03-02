@@ -1,8 +1,15 @@
 'Variables
- leftIr  VAR Bit
- rightIr VAR Bit
+ leftIr     VAR Bit
+ rightIr    VAR Bit
+ leftServo  VAR Byte
+ rightServo VAR Byte
+ counter    VAR Word
 
 'Main
+
+leftServo = 12
+rightServo = 13
+
 DO
     GOSUB checkIrs
     DEBUG HOME, "Left Ir = ", BIN1 leftIr
@@ -17,4 +24,25 @@ checkIrs:
 
     FREQOUT 4, 1, 38500
     rightIr = IN5
+RETURN
+
+goForward:
+   FOR counter = 0 TO 5
+        PULSOUT leftServo, 650
+        PULSOUT rightServo, 850
+   NEXT 
+RETURN
+
+turnLeft:
+   FOR counter = 0 TO 22
+        PULSOUT leftServo, 650
+        PULSOUT rightServo, 650
+   NEXT 
+RETURN
+
+turnRight:
+   FOR counter = 0 TO 22
+        PULSOUT leftServo, 850
+        PULSOUT rightServo, 850
+   NEXT 
 RETURN

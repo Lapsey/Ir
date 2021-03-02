@@ -6,7 +6,7 @@ Simple infrared boe-bot maze navigation script
 ## TODO
 * [x] Add IR check routine
 * [x] Test IR On start up
-* [ ] Add movement subs
+* [x] Add movement subs
 * [ ] Figure out a solution to the maze
 * [ ] Implement the solution
 * [ ] Remove unecessary code 
